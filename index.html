@@ -128,21 +128,15 @@
             display: flex;
             align-items: center;
             gap: 10px;
-        .logo-img {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    object-fit: cover;
-    /* Si tu logo tiene fondo blanco, puedes agregar un borde suave */
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-/* Para versión responsiva */
-@media (max-width: 768px) {
-    .logo-img {
-        width: 35px;
-        height: 35px;
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .header-actions {
@@ -354,7 +348,7 @@
 
         .chart-container {
             margin-top: 30px;
-            height: 20px;
+            height: 400px;
         }
 
         /* Loading States */
@@ -682,6 +676,11 @@
                 width: 100%;
                 justify-content: space-between;
             }
+            
+            .logo-img {
+                width: 35px;
+                height: 35px;
+            }
         }
 
         @media (max-width: 576px) {
@@ -707,7 +706,9 @@
         <div class="container">
             <div class="header-top">
                 <div class="logo">
-                    <img src="https://i.ibb.co/wZtwBWqJ/20251208-223126-0000.png"
+                    <img src="https://i.ibb.co/wZtwBWqJ/20251208-223126-0000.png" 
+                         alt="CryptoNews Pro Logo" 
+                         class="logo-img">
                     <div class="logo-text">
                         <h1>Crypto<span>News</span> Pro</h1>
                         <div class="tagline">Noticias y Análisis de Criptomonedas</div>
@@ -715,7 +716,7 @@
                 </div>
                 <div class="header-actions">
                     <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-                        <i class=""></i>
+                        <i class="fas fa-moon"></i>
                     </button>
                     <button class="whatsapp-button" id="whatsappButton">
                         <i class="fab fa-whatsapp"></i> Únete al Canal
@@ -794,7 +795,11 @@
                 </div>
             </div>
 
-        <div class="chart-container"> <canvas id="" aria-label=""></canvas> </div> </div> </section>
+            <div class="chart-container"> 
+                <canvas id="marketChart" aria-label="Gráfico de precios de criptomonedas"></canvas> 
+            </div>
+        </div>
+    </section>
 
     <!-- Contenido Principal -->
     <div class="container">
@@ -802,8 +807,8 @@
             <div class="content-left">
                 <!-- Artículo Destacado -->
                 <article class="featured-article" itemscope itemtype="https://schema.org/NewsArticle">
-                    <meta itemprop="datePublished" content="2025-12-1">
-                    <meta itemprop="dateModified" content="2025-01-1">
+                    <meta itemprop="datePublished" content="2025-12-01">
+                    <meta itemprop="dateModified" content="2025-12-01">
                     <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
                         <img src="https://i.ibb.co/twkhL8bD/unnamed-33.jpg" 
                              alt="Blockchain Technology" 
@@ -819,7 +824,7 @@
                                 <div class="author-img">IA</div>
                                 <span itemprop="name">Ana Rodríguez</span>
                             </div>
-                            <meta itemprop="datePublished" content="2024-01-15T10:30:00Z">
+                            <meta itemprop="datePublished" content="2025-12-01T10:30:00Z">
                             <time datetime="2025-12-01">Hace 3 horas</time>
                         </div>
                         <p itemprop="description">Las soluciones de capa 2 están transformando la capacidad de Ethereum para manejar transacciones, reduciendo costos y aumentando la velocidad. Analizamos las principales tecnologías y su impacto en el ecosistema.</p>
@@ -851,7 +856,7 @@
                             <p itemprop="description">Los reguladores estadounidenses están reevaluando las solicitudes de ETF de Bitcoin, con posibilidades de aprobación este año.</p>
                             <div class="news-meta">
                                 <span itemprop="author">Por Carlos Méndez</span>
-                                <time datetime="2024-01-15T08:00:00Z">Hace 5 horas</time>
+                                <time datetime="2025-12-01T08:00:00Z">Hace 5 horas</time>
                             </div>
                         </div>
                     </article>
@@ -867,7 +872,7 @@
                             <p itemprop="description">El valor total bloqueado en finanzas descentralizadas alcanza nuevo máximo anual impulsado por innovaciones en farming.</p>
                             <div class="news-meta">
                                 <span itemprop="author">Por Laura Gutiérrez</span>
-                                <time datetime="2024-01-15T06:00:00Z">Hace 7 horas</time>
+                                <time datetime="2025-12-01T06:00:00Z">Hace 7 horas</time>
                             </div>
                         </div>
                     </article>
@@ -883,7 +888,7 @@
                             <p itemprop="description">La Unión Europea avanza con su regulación integral para criptomonedas, estableciendo estándares para emisores y proveedores.</p>
                             <div class="news-meta">
                                 <span itemprop="author">Por Miguel Torres</span>
-                                <time datetime="2024-01-14T22:00:00Z">Hace 10 horas</time>
+                                <time datetime="2025-11-30T22:00:00Z">Hace 10 horas</time>
                             </div>
                         </div>
                     </article>
@@ -899,7 +904,7 @@
                             <p itemprop="description">Una colección de arte digital tokenizada se vendió por una cifra récord, mostrando la fortaleza del mercado de NFTs de alto valor.</p>
                             <div class="news-meta">
                                 <span itemprop="author">Por Sofía Ramírez</span>
-                                <time datetime="2024-01-14T00:00:00Z">Ayer</time>
+                                <time datetime="2025-11-30T00:00:00Z">Ayer</time>
                             </div>
                         </div>
                     </article>
@@ -963,7 +968,9 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <div class="logo">
-                        <div class="logo-img">CNP</div>
+                        <img src="https://i.ibb.co/wZtwBWqJ/20251208-223126-0000.png" 
+                             alt="CryptoNews Pro Logo" 
+                             class="logo-img">
                         <h4>Crypto<span>News</span> Pro</h4>
                     </div>
                     <p>La fuente más confiable de noticias, análisis y datos sobre criptomonedas y blockchain.</p>
@@ -1020,13 +1027,12 @@
     const formatter = new Intl.NumberFormat('es-ES', {
         style: 'currency',
         currency: 'USD',
-        minimumFractionDigits: 2, // Mantenemos 2 decimales para la lista, más limpio
-        maximumFractionDigits: 8, // Máximo de 8 decimales para precios muy bajos
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 8,
     });
 
     const formatCurrency = (value) => {
         if (value === null || value === undefined) return 'N/A';
-        // Ajustamos la visualización de $ para ser consistente
         return '$' + formatter.format(value).replace('$', '').trim();
     };
 
@@ -1042,11 +1048,9 @@
         return formatCurrency(value);
     };
 
-
     // 2. FUNCIÓN PRINCIPAL PARA OBTENER Y MOSTRAR DATOS
     // =======================================================
     async function fetchCryptoData() {
-        // IDs de las criptomonedas: bitcoin, ethereum, ripple (XRP), solana, cardano (ADA)
         const cryptoIds = 'bitcoin,ethereum,ripple,solana,cardano';
         const apiUrl = `https://api.coingecko.com/api/v3/simple/price?ids=${cryptoIds}&vs_currencies=usd&include_24hr_change=true`;
         const globalApiUrl = 'https://api.coingecko.com/api/v3/global';
@@ -1064,40 +1068,42 @@
             if (!globalResponse.ok) throw new Error('Error al cargar datos globales.');
             const globalData = await globalResponse.json();
 
-
-            // A) ACTUALIZAR EL RESUMEN DEL MERCADO (market-stats)
-            // ---------------------------------------------------
+            // A) ACTUALIZAR EL RESUMEN DEL MERCADO
             const marketCapUSD = globalData.data.total_market_cap.usd;
             const volume24hUSD = globalData.data.total_volume.usd;
             const btcDominance = globalData.data.market_cap_percentage.btc;
-            const globalMarketChange = data.bitcoin.usd_24h_change; // Usamos el cambio de BTC como referencia
+            const globalMarketChange = data.bitcoin.usd_24h_change;
 
             // Capitalización Total
             const marketCapValue = document.querySelector('#marketCapCard .stat-value');
-            if (marketCapValue) marketCapValue.textContent = formatMarketCap(marketCapUSD);
+            if (marketCapValue) {
+                marketCapValue.textContent = formatMarketCap(marketCapUSD);
+                marketCapValue.classList.remove('loading');
+            }
+            
             const marketChangeElement = document.querySelector('#marketCapCard .stat-change');
             if (marketChangeElement) {
-                marketChangeElement.textContent = formatPercentage(globalMarketChange) + ' (BTC 24h)';
-                marketChangeElement.style.color = globalMarketChange >= 0 ? '#00c9a7' : '#ff4757'; // Colores de las clases CSS que usé antes
-                const marketCard = document.getElementById('marketCapCard');
-                if (marketCard) marketCard.style.borderLeftColor = globalMarketChange >= 0 ? '#00c9a7' : '#ff4757';
+                marketChangeElement.textContent = formatPercentage(globalMarketChange) + ' (24h)';
+                marketChangeElement.className = globalMarketChange >= 0 ? 'stat-change up' : 'stat-change down';
             }
             
             // Volumen 24h 
             const volumeValue = document.querySelector('#volumeCard .stat-value');
-            if (volumeValue) volumeValue.textContent = formatMarketCap(volume24hUSD);
-            // El volumen cambia muy seguido, mejor dejar el porcentaje estático
-            document.querySelector('#volumeCard .stat-change').textContent = '+5.12%';
+            if (volumeValue) {
+                volumeValue.textContent = formatMarketCap(volume24hUSD);
+                volumeValue.classList.remove('loading');
+            }
 
             // Dominancia BTC
             const btcDominanceValue = document.querySelector('#btcDominanceCard .stat-value');
-            if (btcDominanceValue) btcDominanceValue.textContent = `${btcDominance.toFixed(2)}%`;
-            
+            if (btcDominanceValue) {
+                btcDominanceValue.textContent = `${btcDominance.toFixed(2)}%`;
+                btcDominanceValue.classList.remove('loading');
+            }
 
-            // B) ACTUALIZAR LA LISTA DE TOP CRIPTOMONEDAS (cryptoList)
-            // --------------------------------------------------------
+            // B) ACTUALIZAR LA LISTA DE TOP CRIPTOMONEDAS
             if (cryptoListElement) {
-                cryptoListElement.innerHTML = ''; // Limpiar lista existente
+                cryptoListElement.innerHTML = '';
             
                 const cryptos = [
                     { id: 'bitcoin', name: 'Bitcoin', symbol: 'BTC', icon: '₿', data: data.bitcoin },
@@ -1113,21 +1119,21 @@
                     const changeColor = change24h >= 0 ? '#00c9a7' : '#ff4757';
                     const changeIcon = change24h >= 0 ? '<i class="fas fa-caret-up"></i>' : '<i class="fas fa-caret-down"></i>';
                     
-                    // Creación del elemento de lista (Utiliza estilos en línea para el color de la fuente si tu CSS no lo maneja)
                     const listItem = document.createElement('li');
                     listItem.className = 'crypto-item';
-                    listItem.style = 'display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #e0e0e0;';
                     listItem.innerHTML = `
-                        <div class="crypto-info" style="display: flex; align-items: center; gap: 10px;">
-                            <div class="crypto-icon" style="width: 32px; height: 32px; border-radius: 50%; background-color: #f0f0f0; display: flex; align-items: center; justify-content: center; font-weight: bold;">${crypto.icon || crypto.symbol.charAt(0)}</div>
+                        <div class="crypto-info">
+                            <div class="crypto-icon">${crypto.icon || crypto.symbol.charAt(0)}</div>
                             <div>
-                                <div class="crypto-name" style="font-weight: 600;">${crypto.name}</div>
-                                <div class="crypto-symbol" style="color: #6c757d; font-size: 14px;">${crypto.symbol}</div>
+                                <div class="crypto-name">${crypto.name}</div>
+                                <div class="crypto-symbol">${crypto.symbol}</div>
                             </div>
                         </div>
-                        <div class="crypto-price" style="font-weight: 600; text-align: right;">
+                        <div class="crypto-price">
                             <div>${formatCurrency(price)}</div>
-                            <div class="crypto-change" style="font-size: 14px; font-weight: 600; color: ${changeColor};">${changeIcon} ${formatPercentage(change24h)}</div>
+                            <div class="crypto-change ${change24h >= 0 ? 'up' : 'down'}">
+                                ${changeIcon} ${formatPercentage(change24h)}
+                            </div>
                         </div>
                     `;
                     cryptoListElement.appendChild(listItem);
@@ -1135,7 +1141,7 @@
             }
 
             // C) ACTUALIZAR EL TIEMPO DE ÚLTIMA ACTUALIZACIÓN
-            secondsElapsed = 0; 
+            secondsElapsed = 0;
 
         } catch (error) {
             console.error("Error al obtener los datos de la API:", error);
@@ -1148,8 +1154,7 @@
         }
     }
 
-
-        // 3. INICIALIZACIÓN Y ACTUALIZACIÓN PERIÓDICA
+    // 3. INICIALIZACIÓN Y ACTUALIZACIÓN PERIÓDICA
     // ===========================================
     
     // Ejecutar la función inmediatamente al cargar la página
@@ -1163,9 +1168,14 @@
     
     setInterval(() => {
         const updateTimeElement = document.getElementById('updateTime');
-        if (updateTimeElement && secondsElapsed <= 30) { 
+        if (updateTimeElement) { 
             secondsElapsed++;
             updateTimeElement.textContent = secondsElapsed;
+            
+            // Reiniciar cada 30 segundos cuando se actualizan los datos
+            if (secondsElapsed >= 30) {
+                secondsElapsed = 0;
+            }
         } 
     }, 1000);
     
@@ -1183,15 +1193,19 @@
     
     // Llamar a la función para configurar el botón de WhatsApp
     setupWhatsAppButton();
+
+    // Configurar el botón de tema oscuro/claro
+    document.getElementById('themeToggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-theme');
+        const icon = this.querySelector('i');
+        if (document.body.classList.contains('dark-theme')) {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
+    });
 </script>
 </body>
 </html>
-                                                                                                                                                                                                                         </html>
-
-
-
-
-
-
-
-
