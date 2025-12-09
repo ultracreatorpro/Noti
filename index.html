@@ -1163,7 +1163,7 @@
     }
 
 
-    // 3. INICIALIZACIÓN Y ACTUALIZACIÓN PERIÓDICA
+        // 3. INICIALIZACIÓN Y ACTUALIZACIÓN PERIÓDICA
     // ===========================================
     
     // Ejecutar la función inmediatamente al cargar la página
@@ -1182,20 +1182,21 @@
             updateTimeElement.textContent = secondsElapsed;
         } 
     }, 1000);
-    };
-    }
-
-        // Función para redirigir a WhatsApp
-        function setupWhatsAppButton() {
-            const whatsappButtons = document.querySelectorAll('.whatsapp-button');
-            const whatsappUrl = "https://whatsapp.com/channel/0029Vb5r19PCMY08Nn09Py2O";
-            
-            whatsappButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    window.open(whatsappUrl, '_blank');
-                });
+    
+    // Función para redirigir a WhatsApp
+    function setupWhatsAppButton() {
+        const whatsappButtons = document.querySelectorAll('.whatsapp-button');
+        const whatsappUrl = "https://whatsapp.com/channel/0029Vb5r19PCMY08Nn09Py2O";
+        
+        whatsappButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                window.open(whatsappUrl, '_blank');
             });
-        }
+        });
+    }
+    
+    // Llamar a la función para configurar el botón de WhatsApp
+    setupWhatsAppButton();
 </script>
 </body>
 </html>
