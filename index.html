@@ -128,19 +128,21 @@
             display: flex;
             align-items: center;
             gap: 10px;
+        .logo-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+    /* Si tu logo tiene fondo blanco, puedes agregar un borde suave */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .logo-img {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #1a73e8, #00c9a7);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
+/* Para versión responsiva */
+@media (max-width: 768px) {
+    .logo-img {
+        width: 35px;
+        height: 35px;
         }
 
         .logo-text h1 {
@@ -721,7 +723,7 @@
         <div class="container">
             <div class="header-top">
                 <div class="logo">
-                    <div class="logo-img">https://i.ibb.co/wZtwBWqJ/20251208-223126-0000.png</div>
+                    <img src="https://i.ibb.co/wZtwBWqJ/20251208-223126-0000.png"
                     <div class="logo-text">
                         <h1>Crypto<span>News</span> Pro</h1>
                         <div class="tagline">Noticias y Análisis de Criptomonedas</div>
