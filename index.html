@@ -1182,6 +1182,20 @@
             updateTimeElement.textContent = secondsElapsed;
         } 
     }, 1000);
+
+    }
+
+        // Función para redirigir a WhatsApp
+        function setupWhatsAppButton() {
+            const whatsappButtons = document.querySelectorAll('.whatsapp-button');
+            const whatsappUrl = "https://whatsapp.com/channel/0029Vb5r19PCMY08Nn09Py2O";
+            
+            whatsappButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    window.open(whatsappUrl, '_blank');
+                });
+            });
+        }
 </script>
 </body>
 </html>
